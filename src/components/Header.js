@@ -1,28 +1,17 @@
 import React from 'react';
 
-class Header extends React.Component {
+const Form = () => {
+  return (
+    <div className="section is-fullheight">
+      <div className="container">
+        <div className="column is-4 is-offset-4">
+          <div className="box">
+           
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
 
-    constructor(props) {
-        super(props)
-        this.handleHeaderClicked = this.handleHeaderClicked.bind(this)
-
-    }
-    handleHeaderClicked(){
-        alert(this.props.currentUser)
-    }
-
-    render() {
-        let {currentUser, isLoggedIn} = this.props
-        currentUser = "Logged in as " + currentUser
-
-        return (
-            <div onClick={this.handleHeaderClicked}>
-               Header {isLoggedIn && currentUser}
-            </div>
-        );
-    }
-
-
-}
-
-export default Header
+export default Form;

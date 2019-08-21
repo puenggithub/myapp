@@ -1,4 +1,22 @@
+// http://akveo.com/blur-admin/#/form/layouts
+// https://reduction-admin.github.io/react-reduction/cards
+
 import React, { Component } from 'react'
+import bg11Image from './assets/img/bg/background_1920-11.jpg';
+import {
+    Button,
+    Card,
+    CardBody,
+    CardImg,
+    CardImgOverlay,
+    CardLink,
+    CardText,
+    CardTitle,
+    Col,
+    ListGroup,
+    ListGroupItem,
+    Row,
+  } from 'reactstrap';
 
 export default class Movieitem extends Component {
     constructor(props){
@@ -6,23 +24,31 @@ export default class Movieitem extends Component {
     }
 
     render() {
-        const {id, title, overview, poster_src} = this.props.movie
+        const {id, title, overview, poster_src, poster_path} = this.props.movie
+        let first,last, path;
+        first = poster_path.indexOf("/")
+        last = poster_path.indexOf(".jpg")
+        path = poster_path.substring(first+1,last)
+
         return (
-         <table>
-            <tbody key={id}>
-                <tr>
-                    <td>
-                        <img src={poster_src}/>
-                    </td>
-
-                    <td>
-                        <strong>{title}</strong>
-                        <p>{overview}</p>
-                    </td>
-                </tr>
-            </tbody>
-
-         </table>
+           
+            
+            <Row>
+                <Col md={6} sm={6} xs={12} className="mb-3"></Col>
+                    
+                        <Card>
+                         <CardImg top src={poster_src} />
+                             <CardBody>
+                                <CardTitle><strong>{title}</strong></CardTitle>
+                             <CardText>
+                                    <p>{overview}</p>
+                             </CardText>
+                            </CardBody>
+                        </Card>
+                   
+                        
+           
+         </Row>
         )
     }
 }

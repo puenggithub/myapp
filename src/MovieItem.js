@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> f916dd67d3ec34e12b69fb8be461117287b719aa
 import React, { Component } from 'react'
 import './style.css'
 import bg11Image from './assets/img/bg/background_1920-11.jpg';

@@ -1,5 +1,4 @@
-// http://akveo.com/blur-admin/#/form/layouts
-// https://reduction-admin.github.io/react-reduction/cards
+
 
 import React, { Component } from 'react'
 import bg11Image from './assets/img/bg/background_1920-11.jpg';

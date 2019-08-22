@@ -19,7 +19,7 @@ class App extends React.Component {
 
     componentDidMount() {
        // this.search('her')
-       this.search()
+       this.search('harry')
     }
 
     /*function seach and set state*/
@@ -68,6 +68,7 @@ class App extends React.Component {
                 placeholder="Enter your movie keyword"
                 onChange={(event)=> {this.search(event.target.value)}}/>
             </div>
+            <br />
 
             { /* for loop to display title name from rows  */}
             <div style={{margin: '0 auto', width: '50%'}}>

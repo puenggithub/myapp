@@ -1,21 +1,7 @@
 
 import React, { Component } from 'react'
 import './style.css'
-import bg11Image from './assets/img/bg/background_1920-11.jpg';
-import {
-    Button,
-    Card,
-    CardBody,
-    CardImg,
-    CardImgOverlay,
-    CardLink,
-    CardText,
-    CardTitle,
-    Col,
-    ListGroup,
-    ListGroupItem,
-    Row,
-  } from 'reactstrap';
+
 
 export default class Movieitem extends Component {
     constructor(props){

@@ -1,13 +1,13 @@
-import React from 'react';
+import React, { Component } from 'react'
 
-const Form = () => {
+
+const Header = () => {
   return (
     <div>
-      <p>test</p>
-      
+
     </div>
    
   );
 };
 
-export default Form;
+export default Header;

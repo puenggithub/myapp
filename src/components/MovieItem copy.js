@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import './style.css'
 
 
-export default class Movieitem extends Component {
+export default class Movieitem2 extends Component {
     constructor(props){
         super(props)
         this.state = { mode: 1 }
@@ -29,7 +29,7 @@ export default class Movieitem extends Component {
         this.handleCard()
      }
     render() {
-        const {id, title, overview, poster_src, poster_path, vote_average, popularity} = this.props.movie
+        const {id, title, overview, poster_src, poster_path, vote_average} = this.props.movie
         const modes = this.state.mode
    
         let first,last, path, old;
@@ -37,7 +37,6 @@ export default class Movieitem extends Component {
         last = poster_path.indexOf(".jpg")
         path = poster_path.substring(first+1,last)
        
-        {/* 
             if (modes) {
             return (                 
                 <div className="polaroid row container-fluid">             
@@ -55,21 +54,6 @@ export default class Movieitem extends Component {
                     </div>
                 )
             }
-        */}
-
-        return (
-            <div className="A">
-                <table >
-
-                    <tbody>
-                    <tr>
-                        <td style={{width: '70%'}}>{title}</td>
-                        <td style={{width: 30}}>{vote_average}</td>
-                        <td style={{width: 30}}>{popularity}</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-        )
+        
     }
 }

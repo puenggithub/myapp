@@ -4,6 +4,7 @@ import React from 'react';
 import Axios from 'axios'
 import MovieItem from './MovieItem';
 import Header from'./Header';
+import './style.css'
 
 class Home extends React.Component  {
     /*default state*/
@@ -38,7 +39,7 @@ class Home extends React.Component  {
 
     render() {
        return (
-            <div className="App">
+            <div className="container-fluid">
          
            
             <div >
@@ -49,12 +50,16 @@ class Home extends React.Component  {
             <br />
 
             { /* for loop to display title name from rows  */}
-            <div style={{margin: '0 auto', width: '50%'}}>
-            { this.state.rows.map(item=> (
-                 
-                <MovieItem movie={item}/>
-                
-            ))}
+            <div  style={{margin: '0 auto', width: '50%'}}>
+                <table>
+                    <th style={{width: 300}}>Title</th>
+                    <th style={{width: 20}}>Vote</th>
+                    <th style={{width: 20}}>Popularity</th>
+                </table>
+
+                { this.state.rows.map(item=> (                  
+                    <MovieItem movie={item}/>                   
+                ))}
            </div>
 
     

@@ -63,9 +63,9 @@ export default class Movieitem extends Component {
 
                     <tbody>
                     <tr>
-                        <td style={{width: '70%'}}>{title}</td>
-                        <td style={{width: 30}}>{vote_average}</td>
-                        <td style={{width: 30}}>{popularity}</td>
+                        <td >{title}</td>
+                        <td >{vote_average}</td>
+                        <td >{popularity}</td>
                     </tr>
                     </tbody>
                 </table>

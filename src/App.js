@@ -23,7 +23,7 @@ class App extends React.Component {
                     </div>
                     <ul class="nav" style={{fontSize: 16}}>
                         <li><a href="/" className="navbar-item">Home</a></li>
-                        <li><a href="/dragdrop" className="navbar-item">Drag & Drop</a></li>
+                        <li><a href="/dragdrop" className="navbar-item">Drag-Drop</a></li>
 
                     </ul>
                 </div>

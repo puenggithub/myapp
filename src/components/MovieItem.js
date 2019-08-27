@@ -41,7 +41,7 @@ export default class Movieitem extends Component {
             return (                 
                 <div className="polaroid row container-fluid">             
                     <div class="col-sm-3 col-md-6" style={{backgroundColor: 'lavender'}}><img src={poster_src} style={{width: '60%'}} /></div>
-                    <div class="col-sm-3 col-md-6 text" style={{backgroundColor: 'white'}}>{title} || {vote_average} || {this.state.mode} || {modes}</div>
+                    <div class="col-sm-3 col-md-6 text" style={{backgroundColor: 'white',  paddingTop: 75}}>{title} || {vote_average} || {this.state.mode} || {modes}</div>
                    
                 </div>
             )
@@ -49,8 +49,8 @@ export default class Movieitem extends Component {
                 return (                 
                     <div className="polaroid row container-fluid">             
                         <div class="col-sm-3 col-md-6" style={{backgroundColor: '#5B2C6F'}}><img src={poster_src} style={{width: '60%'}} /></div>
-                        <div class="col-sm-3 col-md-6 text" style={{backgroundColor: 'white'}}>{title} || {vote_average} || {this.state.mode} || {modes}</div>
-                       Test
+                        <div class="col-sm-3 col-md-6 text" style={{backgroundColor: 'white',  paddingTop: 75}}>{title} || {vote_average} || {this.state.mode} || {modes}</div>
+                      
                     </div>
                 )
             }

@@ -47,8 +47,7 @@ export default class MyEditor extends React.Component  {
               className="container__editor"
             />
           </div>
-          <button type="button" class="btn btn-primary btn-sm" style={{fontSize: 14, position: 'absolute',
-            left: '18%'}}> Save </button> 
+          
      
         <div className="container-fluid" style={{width: '70%'}}>
         <AceEditor
@@ -73,7 +72,8 @@ export default class MyEditor extends React.Component  {
             }}/>
             
         </div>
-
+        <button type="button" class="btn btn-primary btn-sm" style={{fontSize: 14, position: 'absolute',
+            left: '18%', marginTop: 20, marginBottom: 20}}> Save </button> 
        </div>
 
     );

@@ -9,7 +9,8 @@ import DragDropComponent from './components/DragDrop'
 import DragDropComponent2 from './components/DragDrop2'
 import OrderComponent from './components/Order'
 import TableComponent from './components/Table'
-
+import EditorComponent from './components/MyEditor'
+import Spare from './components/Spare'
 
 class App extends React.Component { 
     
@@ -28,6 +29,8 @@ class App extends React.Component {
                         <li><a href="/dragdrop2" className="navbar-item">DnD2</a></li>
                         <li><a href="/order" className="navbar-item">Order</a></li>
                         <li><a href="/table" className="navbar-item">Table</a></li>
+                        <li><a href="/editor" className="navbar-item">Editor</a></li>
+                       
                     </ul>
                 </div>
             </nav>
@@ -37,6 +40,8 @@ class App extends React.Component {
                 <Route path="/dragdrop2" component={DragDropComponent2}  />
                 <Route path="/order" component={OrderComponent}  />
                 <Route path="/table" component={TableComponent}  />
+                <Route path="/editor" component={EditorComponent}  />
+                <Route path="/spare" component={Spare}  />
             </div>
         </div>         
         );

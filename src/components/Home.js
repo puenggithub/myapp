@@ -6,6 +6,7 @@ import MovieItem from './MovieItem';
 import Header from'./Header';
 import './style.css'
 
+
 class Home extends React.Component  {
     /*default state*/
     constructor(props) {
@@ -37,6 +38,7 @@ class Home extends React.Component  {
     }
     
 
+
     render() {
        return (
             <div className="container-fluid">
@@ -55,10 +57,12 @@ class Home extends React.Component  {
                     <th style={{width: 300}}>Title</th>
                     <th style={{width: 20}}>Vote</th>
                     <th style={{width: 20}}>Popularity</th>
+
                 </table>
 
                 { this.state.rows.map(item=> (                  
-                    <MovieItem movie={item}/>                   
+                    <MovieItem movie={item}/> 
+                                      
                 ))}
            </div>
 

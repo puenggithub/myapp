@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Axios from 'axios'
 import MovieItem from './MovieItem';
-import Datasort from 'react-data-sort'
 import ReactDOM from "react-dom";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 

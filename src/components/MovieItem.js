@@ -1,9 +1,33 @@
 
 import React, { Component } from 'react'
 import './style.css'
+import MyEditor from './MyEditor';
+import { BrowserRouter, Route } from 'react-router-dom'
+import { Redirect } from 'react-router-dom'
+
+
 
 
 export default class Movieitem extends Component {
+
+    state = {
+        redirect: false
+      }
+      setRedirect = () => {
+        this.setState({
+          redirect: true
+        })
+      }
+      renderRedirect = () => {
+        if (this.state.redirect) {
+          return <Redirect to={{
+            pathname: '/editor',
+            state: { message: JSON.stringify(this.props.movie, undefined, 4) }
+        }} />
+        }
+      }
+
+      
     constructor(props){
         super(props)
         this.state = { mode: 1 }
@@ -20,17 +44,22 @@ export default class Movieitem extends Component {
                 mode: 0
               })
             }
-        console.log(this.props.movie.vote_average)
+       // console.log(this.props.movie.vote_average)
     }
     
-
      componentDidMount() {
         
         this.handleCard()
      }
+
+
     render() {
         const {id, title, overview, poster_src, poster_path, vote_average, popularity} = this.props.movie
+        //console.log(JSON.stringify(this.props.movie, undefined, 2))
+        const content = JSON.stringify(this.props.movie, undefined, 2)
         const modes = this.state.mode
+
+        //this.setState({json: content})
    
         let first,last, path, old;
         first = poster_path.indexOf("/")
@@ -66,9 +95,14 @@ export default class Movieitem extends Component {
                         <td >{title}</td>
                         <td >{vote_average}</td>
                         <td >{popularity}</td>
+                        {this.renderRedirect()}
+                        <button onClick={this.setRedirect}>Redirect</button>
                     </tr>
                     </tbody>
                 </table>
+
+               
+                
             </div>
         )
     }

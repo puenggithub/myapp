@@ -92,11 +92,12 @@ export default class Movieitem extends Component {
 
                     <tbody>
                     <tr>
-                        <td >{title}</td>
-                        <td >{vote_average}</td>
-                        <td >{popularity}</td>
+                        <td>{title}</td>
+                        <td>{vote_average}</td>
+                        <td>{popularity}</td>
                         {this.renderRedirect()}
                         <button onClick={this.setRedirect}>Redirect</button>
+                       
                     </tr>
                     </tbody>
                 </table>
